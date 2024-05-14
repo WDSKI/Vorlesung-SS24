@@ -1,0 +1,28 @@
+h2 {
+  font-size: 24px;
+}
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'header .'
+    'content content'
+    'content content';
+}
+.flexbox {
+  display: flex;
+  grid-area: content;
+}
+#heading {
+  grid-area: header;
+}
+
+.outlined-button {
+  background-color: transparent;
+  color: blue;
+  border: 2px solid blue;
+}
+#playbutton {
+  background-color: blue;
+}
