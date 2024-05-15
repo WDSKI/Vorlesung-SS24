@@ -34,7 +34,7 @@ let arrayNDimension = [
 //object
 //Ein Object besteht aus einer beliebigen Anzahl Key-Value-Pairs mit beliebigen Datentypen
 //Ein object ist ein n-Dimensinaler Baum, der über den Dot-Walk zugriff auf die Childnodes bietet
-const object = {
+let object = {
   id: '1234',
   name: 'Mustermann',
   age: 20,
@@ -45,3 +45,48 @@ const object = {
     d1234: 'test',
   },
 };
+
+//Kopien von Objekten und Arrays werden mit dem s.g.Spreadoperator kopiert
+let objectCopy = { ...object };
+
+//Funktionen in JavaScript
+//oldschool
+const addition = function (val1, val2) {
+  return val1 + val2;
+};
+//moderner
+const subtraktion = (val1, val2) => {
+  return val1 - val2;
+};
+const multiplilation = (val1, val2) => val1 * val2;
+
+let addValue = addition(1, 4);
+// console.log(addValue);
+// console.log(subtraktion(5, 3));
+// console.log(multiplilation(5, 2));
+
+//If else
+const checkBox = true;
+const number1 = 1;
+const number2 = '1';
+
+if (number2 === checkBox) {
+  //   console.log('if case true');
+} else if (!checkBox) {
+  //   console.log('else if case is true');
+} else {
+  //   console.log('last else');
+}
+//Ternary Operator
+// checkBox ? console.log('case true') : console.log('case false');
+
+//Loops
+let index = 0;
+while (index < array.length) {
+  console.log(array[index]);
+  index++;
+}
+
+for (let x = 0; x < array.length; x++) {
+  console.log(array[x]);
+}
