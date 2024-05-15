@@ -37,7 +37,9 @@
             impedit voluptatibus? Tempore quibusdam error facilis aspernatur.
             Aut id facilis ipsam nesciunt.
           </p>
-          <button class="outlined-button">Button</button>
+          <button class="outlined-button" onclick="btnClick(this)">
+            Button
+          </button>
         </section>
         <section class="section-container">
           <h4>Heading 4</h4>
@@ -71,6 +73,19 @@
         incidunt libero, non illum temporibus repellat excepturi aliquid dolore
         ducimus commodi, facilis officiis?
       </p>
+      <input id="name" />
     </footer>
+    <script>
+      const btnClick = (btn) => {
+        console.log(btn);
+        console.log(document.getElementById('name').value);
+      };
+      const buttons = document.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', () => {
+          console.log('clicked');
+        });
+      }
+    </script>
   </body>
 </html>
