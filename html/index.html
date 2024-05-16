@@ -76,14 +76,16 @@
       <input id="name" />
     </footer>
     <script>
+      //Inhalt der Funktion wird nach dem Click ausgeführt
       const btnClick = (btn) => {
         console.log(btn);
         console.log(document.getElementById('name').value);
       };
       const buttons = document.getElementsByTagName('button');
       for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', (e) => {
-          console.log(e);
+        //der Inhalt der Funktion wird ausgeführt nachdem das Event geschmissen wird
+        buttons[i].addEventListener('click', (a) => {
+          console.log(a);
         });
       }
     </script>
