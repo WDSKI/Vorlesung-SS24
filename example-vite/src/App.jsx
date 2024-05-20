@@ -18,7 +18,11 @@ function App() {
   } else {
     component = (
       <>
-        <FormComponent name={name} setName={setName} />
+        <FormComponent name={name} setName={setName}>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </FormComponent>
         {name !== '' ? <div>{name}</div> : <div>Please enter a Name</div>}
         <section>
           <img src='https://www.dhbw.de/fileadmin/user_upload/Bilder_Grafiken/Kacheln/Bettina_Graefin_Bernadotte_DSC0515.jpg' />
