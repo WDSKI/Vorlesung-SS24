@@ -13,12 +13,14 @@ export default function Btn({ asyncProps }) {
   //     setReloadForm(false);
   //   }
   // }, [reloadForm]);
-  // const handleClick = async () => {
-  //   if (!reloadForm) {
-  //     const data = await asyncProps();
-  //     setReloadForm(true);
-  //   }
-  // };
+  //
+  //server actions in client components
+  const handleClick = async () => {
+    if (!reloadForm) {
+      const data = await asyncProps();
+      setReloadForm(true);
+    }
+  };
   //async function and await
   // const handleClick = async () => {
   //   const response = await fetch('http://localhost:3000/tables');
@@ -33,18 +35,18 @@ export default function Btn({ asyncProps }) {
       .then((data) => console.log(data))
       .catch((error) => console.error('Error fetching data:', error));
   }, [reloadForm]);
-  const handleClick = () => {
-    fetch('http://localhost:3000/tables', {
-      method: 'POST',
-      body: JSON.stringify({ id: '789' }),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => console.log(data))
-      .catch((error) => console.error('Error fetching data:', error));
-    setReloadForm((a) => !a);
-  };
+  // const handleClick = () => {
+  //   fetch('http://localhost:3000/tables', {
+  //     method: 'POST',
+  //     body: JSON.stringify({ id: '789' }),
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.error('Error fetching data:', error));
+  //   setReloadForm((a) => !a);
+  // };
   return (
     <>
       <button onClick={() => handleClick()}>Test</button>
