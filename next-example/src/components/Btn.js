@@ -15,9 +15,15 @@ export default function Btn({ asyncProps }) {
   // }, [reloadForm]);
   //
   //server actions in client components
-  const handleClick = async () => {
+  // const handleClick = async () => {
+  //   if (!reloadForm) {
+  //     const data = await asyncProps();
+  //     setReloadForm(true);
+  //   }
+  // };
+  const handleClick = () => {
     if (!reloadForm) {
-      const data = await asyncProps();
+      const data = asyncProps().then((response) => response);
       setReloadForm(true);
     }
   };
