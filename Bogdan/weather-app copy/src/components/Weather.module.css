@@ -1,0 +1,31 @@
+/* components/Weather.module.css */
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .location h2 {
+    margin: 0;
+    color: #666;
+  }
+  
+  .temperature span {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .description p {
+    margin: 0.5rem 0 0;
+    color: #888;
+  }
+  
